@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fade Siblings on Hover</title>
+<style>
+  :root { --dim: .35; }
+
+  body { font-family: system-ui, sans-serif; padding: 2rem; }
+
+  h2 { margin: 0 0 1rem; font-weight: 700; }
+
+  .box {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .cases {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: .5rem 0;
+    margin: 0 0 1rem;
+  }
+
+  .cases li {
+    transition: opacity .25s ease;
+  }
+
+  .cases a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+  }
+
+  .cases:hover li { opacity: var(--dim); }
+
+  .cases li:hover { opacity: 1; }
+
+  .cases:focus-within li { opacity: var(--dim); }
+  .cases li:focus-within { opacity: 1; }
+</style>
+</head>
+<body>
+
+  <div class="box">
+    <ul class="cases">
+      <li><a href="#">Case 1</a></li>
+      <li><a href="#">Case 2</a></li>
+      <li><a href="#">Case 3</a></li>
+    </ul>
+
+    <div style="height:180px; border: #e0e0e0; border-radius:6px;"></div>
+  </div>
+</body>
+</html>
